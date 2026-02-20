@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Powmer</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="portfolio-page euclids-theme">
+
+    <a href="../Portfolio.html" class="exit-btn">Sair</a>
+
+    <div class="page-wrapper">
+
+        <header class="profile-header">
+            <img src="../Powmer.jpg" class="avatar" alt="Powmer Icon">
+            <div class="info">
+                <h1>Powmer</h1>
+
+                <div class="socials">
+                    <a href="https://x.com/PunchaBunch" target="_blank">
+                        <img src="twitter.png" class="twitter-icon" alt="Twitter">
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- ================= ÚLTIMOS POSTS ================= -->
+
+        <section class="section-container">
+            <h3>Últimos Posts</h3>
+
+            <div class="slider-wrapper">
+                <button class="arrow-btn left"
+                        onclick="scrollSlider(-1, 'twitter-slider')">&#10094;</button>
+
+                <div class="side-scroll" id="twitter-slider">
+
+                    <div class="twitter-card">
+                        <img src="Desenhos/1.jpg">
+                        <a href = "https://x.com/euclideeez/status/1997186713194479848/photo/1" target="_blank" class="overlay">
+                            <span>Visualizar Post</span>
+                        </a>
+                    </div>
+
+                    <div class="twitter-card">
+                        <img src="Desenhos/2.jpg">
+                        <a href="https://x.com/euclideeez/status/1984069809240469735/photo/1" target="_blank" class="overlay">
+                            <span>Visualizar Post</span>
+                        </a>
+                    </div>
+
+                    <div class="twitter-card">
+                        <img src="Desenhos/3.jpeg">
+                        <a href="https://x.com/PunchaBunch" target="_blank" class="overlay">
+                            <span>Visualizar Post</span>
+                        </a>
+                    </div>
+                    <div class="twitter-card">
+                        <img src="Desenhos/1.jpg">
+                        <a href="1 https://x.com/PunchaBunch/status/1983680421071323542/photo/1" target="_blank" class="overlay">
+                            <span>Visualizar Post</span>
+                        </a>
+                    </div>
+                </div>
+
+                <button class="arrow-btn right"
+                        onclick="scrollSlider(1, 'twitter-slider')">&#10095;</button>
+            </div>
+        </section>
+
+        <!-- ================= NO FORNO ================= -->
+
+        <section class="section-container">
+            <h3>No forno</h3>
+
+            <div class="slider-wrapper">
+                <button class="arrow-btn left"
+                        onclick="scrollSlider(-1, 'forno-slider')">&#10094;</button>
+
+                <div class="side-scroll" id="forno-slider">
+                    <img class="preview-blur" src="Desenhos/1.jpg">
+                    <img class="preview-blur" src="Desenhos/1.jpg">
+                </div>
+
+                <button class="arrow-btn right"
+                        onclick="scrollSlider(1, 'forno-slider')">&#10095;</button>
+            </div>
+        </section>
+
+        <!-- ================= GALERIA ================= -->
+        <section class="section-container">
+            <h3>Galeria Geral</h3>
+        
+            <div class="featured-mosaic">
+                <img src="Desenhos/3.png" class="big-feature" alt="Destaque">
+                
+                <img src="Desenhos/Powmer JPEGG.png" alt="Galeria 2">
+                <img src="Desenhos/12 - Cópia - Cópia.png" alt="Galeria 3">
+            </div>
+        
+            <div class="vertical-gallery remaining-gallery">
+                <img src="Desenhos/SumoWhale.jpg" alt="Sumo Whale">
+                </div>
+        
+        </section>
+
+    </div>
+
+    <!-- ================= SCRIPT ================= -->
+
+    <script>
+        function scrollSlider(direction, id) {
+            const slider = document.getElementById(id);
+            const scrollAmount = 340;
+
+            if (!slider) return;
+
+            slider.scrollBy({
+                left: direction * scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+    <!-- ================= MODAL ================= -->
+
+    <div id="image-modal" class="image-modal">
+        <img id="modal-img">
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="site-footer">
+        All rights reserved © Euclids
+    </footer>
+
+</body>
+</html>
